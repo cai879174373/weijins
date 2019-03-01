@@ -26,6 +26,13 @@
 #header .container .row > div ~ div {
   border-left: 1px solid #666;
 }
+#header .container .modal-body .form-horizontal .control-label {
+  padding-top: 0;
+}
+#header .container .modal-body .form-horizontal button {
+  width: 100%;
+  background-color: green;
+}
 #nav {
   background-color: #fff;
   margin-bottom: 0;
@@ -82,13 +89,13 @@
   color: #e92322;
 }
 #booking {
-  padding: 20px;
+  padding: 20px 0;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
 #products {
   background-color: #f5f5f5;
-  padding: 40px;
+  padding: 40px 0;
 }
 #products .nav-tabs li a {
   border: 0;
@@ -107,11 +114,11 @@
   display: flex;
   margin-top: 20px;
   background-color: #fff;
-  position: relative;
 }
 #products .tab-content .row .product.active {
   background-color: #e92322;
   color: #fff;
+  position: relative;
 }
 #products .tab-content .row .product.active::before {
   font-family: itcast;
@@ -128,22 +135,33 @@
 #products .tab-content .row .product .left h4 {
   text-align: center;
 }
-#products .tab-content .row .product .left p {
-  margin-top: 10px;
-  margin-bottom: 0;
+#products .tab-content .row .product .left .row > div {
+  margin-bottom: 10px;
 }
-#products .tab-content .row .product .left .col-xs-6:nth-of-type(2),
-#products .tab-content .row .product .left .col-xs-6:nth-of-type(4) {
+#products .tab-content .row .product .left .row > div:nth-of-type(2n) {
   text-align: right;
 }
+#products .tab-content .row .product .left .row > div p {
+  margin-bottom: 0;
+}
 #products .tab-content .row .product .right {
-  border-left: 1px dashed #ccc;
   width: 120px;
+  border-left: 1px dashed #ccc;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
+}
+@media (max-width: 340px) {
+  #products .tab-content .row .product .right {
+    width: 100px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  #products .tab-content .row .product .right {
+    width: 100px;
+  }
 }
 #products .tab-content .row .product .right::before,
 #products .tab-content .row .product .right::after {
@@ -181,6 +199,64 @@
 #products .tab-content .row .product .right .tooltips .btn-default:hover {
   background-color: transparent;
 }
-#footer {
-  height: 600px;
+#news {
+  padding: 40px 0;
+}
+#news .row > div h4 {
+  text-align: center;
+  line-height: 40px ;
+  border-bottom: 1px dashed #ccc;
+  position: relative;
+}
+#news .row > div h4::after {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  content: '';
+  right: -10px;
+  bottom: -5px;
+}
+#news .row > div .nav-tabs {
+  border-bottom: 0;
+}
+@media (max-width: 992px) {
+  #news .row > div .nav-tabs li {
+    width: 25%;
+  }
+  #news .row > div .nav-tabs li a {
+    width: 60px;
+    margin: 0 auto;
+  }
+}
+#news .row > div .nav-tabs li a {
+  color: #666;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 0;
+}
+#news .row > div .nav-tabs li a:hover {
+  background-color: #e92322;
+}
+#news .row > div .nav-tabs li a i {
+  font-size: 30px;
+}
+#news .row > div .nav-tabs li.active a {
+  background-color: #e92322;
+}
+#footer .container h3 {
+  text-align: center;
+}
+#footer .container .content .row a {
+  display: block;
+  text-align: center;
+  color: #666;
+}
+#footer .container .content .row a:hover {
+  color: #e92322;
+  text-decoration: none;
+}
+#footer .container .content .row i {
+  font-size: 60px;
 }
