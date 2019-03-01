@@ -1,0 +1,66 @@
+#header {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-bottom: 1px solid #666;
+}
+#header .container {
+  position: relative;
+  font-size: 12px;
+}
+#header .container a {
+  color: #666;
+  text-decoration: none;
+}
+#header .container .link:hover img {
+  display: block;
+}
+#header .container img {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  z-index: 3;
+}
+#header .container .row > div ~ div {
+  border-left: 1px solid #666;
+}
+#nav {
+  background-color: #fff;
+  margin-bottom: 0;
+  top: 0px;
+  z-index: 2;
+  width: 100%;
+}
+#nav .navbar-header {
+  /* 移动端显示的按钮 */
+}
+#nav .navbar-header .navbar-toggle {
+  margin-top: 23px;
+}
+#nav .navbar-header .navbar-brand {
+  height: 80px;
+  /* 注意a的行高只能写50px因为a自带了15px padding-top bottom 内容挤得只有50px 行高只能是50px */
+  line-height: 50px;
+}
+#nav .navbar-header .navbar-brand > i {
+  font-size: 30px;
+}
+#nav .navbar-header .navbar-brand > i.icon-icon {
+  color: #e92322;
+}
+#nav .navbar-header .navbar-brand > i.icon-logo {
+  color: #000;
+}
+#nav .navbar-collapse .navbar-nav > li > a {
+  height: 80px;
+  line-height: 50px;
+}
+#nav .navbar-collapse .navbar-nav > li > a:hover {
+  border-bottom: 2px solid #e92322;
+}
+#nav .navbar-collapse .navbar-nav > li.active > a {
+  background-color: #fff;
+  border-bottom: 2px solid #e92322;
+}
