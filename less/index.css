@@ -29,38 +29,158 @@
 #nav {
   background-color: #fff;
   margin-bottom: 0;
-  top: 0px;
+  top: 0;
   z-index: 2;
   width: 100%;
 }
-#nav .navbar-header {
-  /* 移动端显示的按钮 */
-}
-#nav .navbar-header .navbar-toggle {
+#nav .container .navbar-header .navbar-toggle {
   margin-top: 23px;
 }
-#nav .navbar-header .navbar-brand {
+#nav .container .navbar-header .navbar-brand {
   height: 80px;
-  /* 注意a的行高只能写50px因为a自带了15px padding-top bottom 内容挤得只有50px 行高只能是50px */
   line-height: 50px;
-}
-#nav .navbar-header .navbar-brand > i {
   font-size: 30px;
 }
-#nav .navbar-header .navbar-brand > i.icon-icon {
+#nav .container .navbar-header .navbar-brand .icon-icon {
   color: #e92322;
 }
-#nav .navbar-header .navbar-brand > i.icon-logo {
-  color: #000;
+#nav .container .navbar-header .navbar-brand .icon-logo {
+  color: #333;
 }
-#nav .navbar-collapse .navbar-nav > li > a {
+#nav .navbar-collapse li a {
   height: 80px;
   line-height: 50px;
 }
-#nav .navbar-collapse .navbar-nav > li > a:hover {
+#nav .navbar-collapse li.active {
   border-bottom: 2px solid #e92322;
 }
-#nav .navbar-collapse .navbar-nav > li.active > a {
+#nav .navbar-collapse li.active > a {
   background-color: #fff;
+}
+#nav .navbar-collapse li:hover {
   border-bottom: 2px solid #e92322;
+}
+#slide .large-img {
+  width: 100%;
+  height: 410px;
+  background-position: center center;
+}
+#slide .small-img {
+  width: 100%;
+}
+#payment {
+  padding: 40px;
+}
+#payment .media {
+  padding: 10px;
+}
+#payment .media a {
+  color: #333;
+  text-decoration: none;
+}
+#payment .media a:hover {
+  color: #e92322;
+}
+#booking {
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+#products {
+  background-color: #f5f5f5;
+  padding: 40px;
+}
+#products .nav-tabs li a {
+  border: 0;
+  border-bottom: 3px solid transparent;
+  font-size: 16px;
+  color: #333;
+}
+#products .nav-tabs li a:hover {
+  background-color: transparent;
+}
+#products .nav-tabs li.active a {
+  background-color: transparent;
+  border-bottom: 3px solid #e92322;
+}
+#products .tab-content .row .product {
+  display: flex;
+  margin-top: 20px;
+  background-color: #fff;
+  position: relative;
+}
+#products .tab-content .row .product.active {
+  background-color: #e92322;
+  color: #fff;
+}
+#products .tab-content .row .product.active::before {
+  font-family: itcast;
+  content: "\e915";
+  position: absolute;
+  font-size: 30px;
+  left: 0;
+  top: -6px;
+}
+#products .tab-content .row .product .left {
+  flex: 1;
+  padding: 15px;
+}
+#products .tab-content .row .product .left h4 {
+  text-align: center;
+}
+#products .tab-content .row .product .left p {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+#products .tab-content .row .product .left .col-xs-6:nth-of-type(2),
+#products .tab-content .row .product .left .col-xs-6:nth-of-type(4) {
+  text-align: right;
+}
+#products .tab-content .row .product .right {
+  border-left: 1px dashed #ccc;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#products .tab-content .row .product .right::before,
+#products .tab-content .row .product .right::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #f5f5f5;
+  left: -8px;
+  border-radius: 50%;
+}
+#products .tab-content .row .product .right::before {
+  top: -8px;
+}
+#products .tab-content .row .product .right::after {
+  bottom: -8px;
+}
+#products .tab-content .row .product .right span strong {
+  font-size: 30px;
+}
+#products .tab-content .row .product .right .tooltips {
+  position: absolute;
+  top: 15px;
+  width: 100%;
+  text-align: center;
+}
+#products .tab-content .row .product .right .tooltips .btn-default:nth-of-type(1) {
+  border: 1px solid #e92322;
+  color: #e92322;
+}
+#products .tab-content .row .product .right .tooltips .btn-default:last-of-type {
+  border: 1px solid #0f0;
+  color: #0f0;
+}
+#products .tab-content .row .product .right .tooltips .btn-default:hover {
+  background-color: transparent;
+}
+#footer {
+  height: 600px;
 }
